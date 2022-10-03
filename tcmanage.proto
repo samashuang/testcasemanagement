@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message TestCase{
+  string name = 1;
+  string descriptions = 2;
+  string steps = 3;
+  string expected_result=4;
+
+}
+
+
+message TestSuite{
+  string api_name=1;
+  TestCase test_case = 2;
+  string last_operator =3;
+  string last_modified = 4;
+}
+
+message TestSuites{
+  repeated TestSuite test_suites=1;
+}
+
